@@ -26,7 +26,7 @@ jobs:
         env:
           CI: true
         run: |
-          npm ci
+          npm install
       #- name: deploy
       #  run: |
       #    npx ncc build index.ts
