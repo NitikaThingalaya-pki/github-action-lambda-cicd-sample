@@ -20,7 +20,7 @@ jobs:
         with:
           role-to-assume: ${{ secrets.AWS_ROLE }}
           aws-region: ${{ secrets.AWS_REGION }}
-          role-session-name: GitHub-OIDC-TERRAFORM
+          role-session-name: Github-OIDC-Lambda
       - name: npm install
         env:
           CI: true
