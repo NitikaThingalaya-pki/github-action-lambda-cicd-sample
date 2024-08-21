@@ -27,8 +27,8 @@ jobs:
           CI: true
         run: |
           npm install
-      #- name: deploy
-      #  run: |
-      #    npx ncc build index.ts
-      #    zip -j deploy.zip ./dist/*
-      #    aws lambda update-function-code --function-name=github-action-lambda-cicd-sample --zip-file=fileb://deploy.zip
+      - name: deploy
+        run: |
+          npx ncc build index.ts
+          zip -j deploy.zip ./dist/*
+          aws lambda update-function-code --function-name=github-action-lambda-cicd-sample --zip-file=fileb://deploy.zip
