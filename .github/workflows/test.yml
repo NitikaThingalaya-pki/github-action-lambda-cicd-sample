@@ -1,0 +1,14 @@
+name: Deploy
+
+on:
+  workflow_dispatch:  # This enables manual triggering of the workflow
+
+jobs:
+  deploy_lambda:
+    runs-on: ubuntu-latest
+    environment: aws
+    steps:
+      - name: Test Workflow
+        run: |
+          echo "Test"
+          
