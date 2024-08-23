@@ -64,7 +64,7 @@ jobs:
   
       - name: Run wiz-cli directory scan
         run: |
-                ls -R
+                ls -R .
                 ./wizcli dir scan --path . --policy "Revvity Data Security policy,Revvity Secret Management Policy,Revvity Vulnerability Management policy"
   
       - name: Run wiz-cli IAC scan
