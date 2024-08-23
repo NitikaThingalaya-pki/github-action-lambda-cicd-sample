@@ -48,8 +48,9 @@ jobs:
           npm install
       - name: build
         run: |
-          #npx ncc build index.ts
+          npx ncc build index.ts
           zip -j deploy.zip ./dist/*
+          ls
           #aws lambda update-function-code --function-name=github-action-lambda-cicd-sample --zip-file=fileb://deploy.zip
 
       - name: Download Wiz CLI
@@ -62,7 +63,9 @@ jobs:
         #  WIZ_CLIENT_SECRET: ${{ secrets.WIZ_CLIENT_SECRET }}
   
       - name: Run wiz-cli directory scan
-        run: ./wizcli dir scan --path . --policy "Revvity Data Security policy,Revvity Secret Management Policy,Revvity Vulnerability Management policy"
+        run: |
+                ls -R
+                ./wizcli dir scan --path . --policy "Revvity Data Security policy,Revvity Secret Management Policy,Revvity Vulnerability Management policy"
   
       - name: Run wiz-cli IAC scan
         run: ./wizcli iac scan --path . --policy "Revvity Infrastructure As Code Policy"
