@@ -38,8 +38,7 @@ jobs:
           export WIZ_CLIENT_SECRET=$(jq -r .WIZ_CLIENT_SECRET wiz_creds.json)
           echo "WIZ_CLIENT_ID=${WIZ_CLIENT_ID}" >> $GITHUB_ENV
           echo "WIZ_CLIENT_SECRET=${WIZ_CLIENT_SECRET}" >> $GITHUB_ENV
-          echo "WIZ_CLIENT_ID: ${WIZ_CLIENT_ID}"
-          echo "WIZ_CLIENT_SECRET: ${WIZ_CLIENT_SECRET}"
+          ls
 
       
       - name: npm install
